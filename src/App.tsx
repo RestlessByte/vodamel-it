@@ -14,7 +14,8 @@ import {
   Wifi,
   Users,
   Settings,
-  HelpCircle
+  HelpCircle,
+  Database
 } from "lucide-react";
 import {
   User,
@@ -45,6 +46,7 @@ import TonerWarehouse from "./components/TonerWarehouse";
 import AlertConfig from "./components/AlertConfig";
 import AuditLogView from "./components/AuditLogView";
 import DockerGuide from "./components/DockerGuide";
+import DatabaseConsole from "./components/DatabaseConsole";
 
 export default function App() {
   // --- Persistent State from LocalStorage ---
@@ -230,6 +232,7 @@ export default function App() {
                 { id: "grafana", label: "Дашборд Grafana (CPU/RAM)", icon: Activity, color: "text-orange-500" },
                 { id: "alerts", label: "Калибровка API Оповещений", icon: Bell, color: "text-rose-500" },
                 { id: "audit", label: "Журнал аудита действий", icon: AuditLogView, color: "text-amber-400" },
+                { id: "database", label: "Консоль Базы Данных (БД)", icon: Database, color: "text-indigo-400" },
                 { id: "docker", label: "Контейнеры Docker", icon: Server, color: "text-cyan-400" }
               ].map((tab) => {
                 const TabIcon = tab.id === "audit" ? ShieldAlert : tab.icon;
@@ -350,6 +353,25 @@ export default function App() {
 
           {currentTab === "docker" && (
             <DockerGuide />
+          )}
+
+          {currentTab === "database" && (
+            <DatabaseConsole
+              computers={computers}
+              cartridgeModels={cartridgeModels}
+              tonerTubs={tonerTubs}
+              weighingLogs={weighingLogs}
+              auditLogs={auditLogs}
+              alertSettings={alertSettings}
+              currentUserRole={currentUserRole}
+              onUpdateComputers={setComputers}
+              onUpdateCartridges={setCartridgeModels}
+              onUpdateTonerTubs={setTonerTubs}
+              onUpdateWeighingLogs={setWeighingLogs}
+              onUpdateAuditLogs={setAuditLogs}
+              onUpdateAlertSettings={setAlertSettings}
+              onAddAuditLog={handleAddAuditLog}
+            />
           )}
 
         </div>
