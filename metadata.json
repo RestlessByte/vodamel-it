@@ -1,0 +1,6 @@
+{
+  "name": "Рабочий стол IT и склада",
+  "description": "Интегрированная система управления: учет картриджей на складе по весу, инвентаризация ПК с привязкой к пользователям, Grafana-панель мониторинга, Telegram оповещения и фотостудия 3х4.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
