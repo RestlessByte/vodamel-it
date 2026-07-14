@@ -26,7 +26,9 @@ export const initialComputers: Computer[] = [
       { name: "CartridgeScaleDriver", status: "running" },
       { name: "TonerTrackerAgent", status: "running" },
       { name: "Spooler (Print Spooler)", status: "running" }
-    ]
+    ],
+    department: "Склад",
+    subdepartment: "Приемка"
   },
   {
     id: "pc-2",
@@ -46,7 +48,9 @@ export const initialComputers: Computer[] = [
       { name: "GrafanaAgent", status: "running" },
       { name: "SSH Daemon", status: "running" },
       { name: "Nginx Server", status: "running" }
-    ]
+    ],
+    department: "Администрация",
+    subdepartment: "IT-служба"
   },
   {
     id: "pc-3",
@@ -66,7 +70,9 @@ export const initialComputers: Computer[] = [
       { name: "ScaleCOMBridge", status: "stopped" },
       { name: "BarcodeListener", status: "running" },
       { name: "LocalCacheSync", status: "running" }
-    ]
+    ],
+    department: "Склад",
+    subdepartment: "Упаковка и сканирование"
   },
   {
     id: "pc-4",
@@ -85,7 +91,9 @@ export const initialComputers: Computer[] = [
     services: [
       { name: "CUPS Server", status: "stopped" },
       { name: "ZebraMQTTBridge", status: "stopped" }
-    ]
+    ],
+    department: "Склад",
+    subdepartment: "Маркировка"
   }
 ];
 

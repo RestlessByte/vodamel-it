@@ -27,6 +27,8 @@ export interface Computer {
   lastCheck: string;
   integrityHash: string;
   services: { name: string; status: "running" | "stopped" }[];
+  department?: string;
+  subdepartment?: string;
 }
 
 export interface CartridgeModel {
